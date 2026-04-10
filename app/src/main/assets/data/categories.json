@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "title": "Введение",
+    "description": "Раздел: Введение",
+    "iconResName": "ic_local_fire_department"
+  },
+  {
+    "id": 2,
+    "title": "Психология",
+    "description": "Раздел: Психология",
+    "iconResName": "ic_psychology"
+  },
+  {
+    "id": 3,
+    "title": "Планирование",
+    "description": "Раздел: Планирование",
+    "iconResName": "ic_map"
+  },
+  {
+    "id": 4,
+    "title": "Наборы",
+    "description": "Раздел: Наборы",
+    "iconResName": "ic_build"
+  },
+  {
+    "id": 5,
+    "title": "Приложения",
+    "description": "Раздел: Приложения",
+    "iconResName": "ic_phone_android"
+  },
+  {
+    "id": 6,
+    "title": "Базовая медицина",
+    "description": "Раздел: Базовая медицина",
+    "iconResName": "ic_medical_services"
+  },
+  {
+    "id": 7,
+    "title": "Укрытия",
+    "description": "Раздел: Укрытия",
+    "iconResName": "ic_house"
+  },
+  {
+    "id": 8,
+    "title": "Добыча воды",
+    "description": "Раздел: Добыча воды",
+    "iconResName": "ic_water_drop"
+  },
+  {
+    "id": 9,
+    "title": "Разведение огня",
+    "description": "Раздел: Разведение огня",
+    "iconResName": "ic_local_fire_department"
+  },
+  {
+    "id": 10,
+    "title": "Добыча пищи",
+    "description": "Раздел: Добыча пищи",
+    "iconResName": "ic_restaurant"
+  },
+  {
+    "id": 11,
+    "title": "Использование растений",
+    "description": "Раздел: Использование растений",
+    "iconResName": "ic_forest"
+  },
+  {
+    "id": 12,
+    "title": "Опасные животные",
+    "description": "Раздел: Опасные животные",
+    "iconResName": "ic_pets"
+  },
+  {
+    "id": 13,
+    "title": "Инструменты и оборудование",
+    "description": "Раздел: Инструменты и оборудование",
+    "iconResName": "ic_build"
+  },
+  {
+    "id": 14,
+    "title": "Ремонт автомобиля",
+    "description": "Раздел: Ремонт автомобиля",
+    "iconResName": "ic_directions_car"
+  },
+  {
+    "id": 15,
+    "title": "Базовые механические навыки",
+    "description": "Раздел: Базовые механические навыки",
+    "iconResName": "ic_build"
+  },
+  {
+    "id": 16,
+    "title": "Вождение без света",
+    "description": "Раздел: Вождение без света",
+    "iconResName": "ic_directions_car"
+  },
+  {
+    "id": 17,
+    "title": "Оружие",
+    "description": "Раздел: Оружие",
+    "iconResName": "ic_warning"
+  },
+  {
+    "id": 18,
+    "title": "Пустыня",
+    "description": "Раздел: Пустыня",
+    "iconResName": "ic_wb_sunny"
+  },
+  {
+    "id": 19,
+    "title": "Тропики",
+    "description": "Раздел: Тропики",
+    "iconResName": "ic_park"
+  },
+  {
+    "id": 20,
+    "title": "Холодная погода",
+    "description": "Раздел: Холодная погода",
+    "iconResName": "ic_ac_unit"
+  },
+  {
+    "id": 21,
+    "title": "Море",
+    "description": "Раздел: Море",
+    "iconResName": "ic_sailing"
+  },
+  {
+    "id": 22,
+    "title": "Переправа через воду",
+    "description": "Раздел: Переправа через воду",
+    "iconResName": "ic_sailing"
+  },
+  {
+    "id": 23,
+    "title": "Ориентирование",
+    "description": "Раздел: Ориентирование",
+    "iconResName": "ic_explore"
+  },
+  {
+    "id": 24,
+    "title": "Сигнальные техники",
+    "description": "Раздел: Сигнальные техники",
+    "iconResName": "ic_campaign"
+  },
+  {
+    "id": 25,
+    "title": "Выживание в враждебных районах",
+    "description": "Раздел: Выживание в враждебных районах",
+    "iconResName": "ic_warning"
+  },
+  {
+    "id": 26,
+    "title": "Камуфляж",
+    "description": "Раздел: Камуфляж",
+    "iconResName": "ic_visibility_off"
+  },
+  {
+    "id": 27,
+    "title": "Контакт с местными жителями",
+    "description": "Раздел: Контакт с местными жителями",
+    "iconResName": "ic_people"
+  },
+  {
+    "id": 28,
+    "title": "Опасные членистоногие",
+    "description": "Раздел: Опасные членистоногие",
+    "iconResName": "ic_bug_report"
+  },
+  {
+    "id": 29,
+    "title": "Рыбы и моллюски",
+    "description": "Раздел: Рыбы и моллюски",
+    "iconResName": "ic_set_meal"
+  },
+  {
+    "id": 30,
+    "title": "Электроэнергия",
+    "description": "Раздел: Электроэнергия",
+    "iconResName": "ic_bolt"
+  },
+  {
+    "id": 31,
+    "title": "Узлы",
+    "description": "Раздел: Узлы",
+    "iconResName": "ic_gesture"
+  },
+  {
+    "id": 32,
+    "title": "Черный список",
+    "description": "Раздел: Черный список",
+    "iconResName": "ic_cancel"
+  },
+  {
+    "id": 33,
+    "title": "Ссылки",
+    "description": "Раздел: Ссылки",
+    "iconResName": "ic_link"
+  }
+]
