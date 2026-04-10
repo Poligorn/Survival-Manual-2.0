@@ -42,17 +42,10 @@ fun HomeScreen(viewModel: SurvivalViewModel, onArticleClick: (Int) -> Unit) {
     val bookmarkedArticles by viewModel.bookmarkedArticles.collectAsState()
     val searchResults by viewModel.searchResults.collectAsState()
     val homeListType by viewModel.homeListTypeFlow.collectAsState(initial = "recent")
-    val coverImage by viewModel.coverImageFlow.collectAsState(initial = "forest")
 
     val displayList = if (homeListType == "bookmarks") bookmarkedArticles else recentArticles
     val listTitle = if (homeListType == "bookmarks") "Избранное" else "Недавно читали"
     val subtitleText = if (homeListType == "bookmarks") "В закладках" else "Недавно"
-
-    val coverRes = when(coverImage) {
-        "mountain" -> R.drawable.home_bg_mountain
-        "desert" -> R.drawable.home_bg_desert
-        else -> R.drawable.home_bg_forest
-    }
 
     Box(
         modifier = Modifier
@@ -62,7 +55,7 @@ fun HomeScreen(viewModel: SurvivalViewModel, onArticleClick: (Int) -> Unit) {
         // Pseudo Background Image (Gradient placeholder for forest)
         Box(modifier = Modifier.fillMaxWidth().height(300.dp)) {
             Image(
-                painter = painterResource(id = coverRes),
+                painter = painterResource(id = R.drawable.home_bg),
                 contentDescription = "Background",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()

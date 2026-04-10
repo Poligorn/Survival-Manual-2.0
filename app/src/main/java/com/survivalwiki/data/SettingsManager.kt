@@ -19,7 +19,6 @@ class SettingsManager(private val context: Context) {
         val FONT_SIZE_KEY = intPreferencesKey("font_size_key") // 0 = Small, 1 = Medium, 2 = Large
         val ACCENT_COLOR_KEY = stringPreferencesKey("accent_color_key") // "orange", "olive", "blue"
         val HOME_LIST_TYPE_KEY = stringPreferencesKey("home_list_type_key") // "recent", "bookmarks"
-        val COVER_IMAGE_KEY = stringPreferencesKey("cover_image_key") // "forest", "mountain", "desert"
     }
 
     val themeFlow: Flow<String> = context.dataStore.data.map { preferences ->
@@ -36,10 +35,6 @@ class SettingsManager(private val context: Context) {
 
     val homeListTypeFlow: Flow<String> = context.dataStore.data.map { preferences ->
         preferences[HOME_LIST_TYPE_KEY] ?: "recent"
-    }
-
-    val coverImageFlow: Flow<String> = context.dataStore.data.map { preferences ->
-        preferences[COVER_IMAGE_KEY] ?: "forest"
     }
 
     suspend fun setTheme(theme: String) {
@@ -63,12 +58,6 @@ class SettingsManager(private val context: Context) {
     suspend fun setHomeListType(type: String) {
         context.dataStore.edit { preferences ->
             preferences[HOME_LIST_TYPE_KEY] = type
-        }
-    }
-
-    suspend fun setCoverImage(cover: String) {
-        context.dataStore.edit { preferences ->
-            preferences[COVER_IMAGE_KEY] = cover
         }
     }
 }

@@ -33,13 +33,11 @@ fun SettingsScreen(viewModel: SurvivalViewModel) {
     var showFontDialog by remember { mutableStateOf(false) }
     var showAccentDialog by remember { mutableStateOf(false) }
     var showHomeListDialog by remember { mutableStateOf(false) }
-    var showCoverDialog by remember { mutableStateOf(false) }
 
     val currentTheme by viewModel.themeFlow.collectAsState(initial = "dark")
     val currentFontSize by viewModel.fontSizeFlow.collectAsState(initial = 1)
     val currentAccent by viewModel.accentColorFlow.collectAsState(initial = "orange")
     val currentHomeList by viewModel.homeListTypeFlow.collectAsState(initial = "recent")
-    val currentCover by viewModel.coverImageFlow.collectAsState(initial = "forest")
 
     val themeLabel = when (currentTheme) {
         "light" -> "Светлая тема"
@@ -62,12 +60,6 @@ fun SettingsScreen(viewModel: SurvivalViewModel) {
     val homeListLabel = when (currentHomeList) {
         "bookmarks" -> "Избранное"
         else -> "Недавно читали"
-    }
-
-    val coverLabel = when (currentCover) {
-        "mountain" -> "Горы"
-        "desert" -> "Пустыня"
-        else -> "Лес"
     }
 
     if (showClearDialog) {
@@ -238,42 +230,6 @@ fun SettingsScreen(viewModel: SurvivalViewModel) {
         )
     }
 
-    if (showCoverDialog) {
-        AlertDialog(
-            onDismissRequest = { showCoverDialog = false },
-            title = { Text("Обложка главной страницы", color = MaterialTheme.colorScheme.onBackground) },
-            text = {
-                Column {
-                    listOf("forest" to "Лес", "mountain" to "Горы", "desert" to "Пустыня").forEach { (value, label) ->
-                        Row(
-                            Modifier
-                                .fillMaxWidth()
-                                .clickable {
-                                    viewModel.setCoverImage(value)
-                                    showCoverDialog = false
-                                }
-                                .padding(vertical = 12.dp)
-                        ) {
-                            RadioButton(
-                                selected = currentCover == value,
-                                onClick = {
-                                    viewModel.setCoverImage(value)
-                                    showCoverDialog = false
-                                },
-                                colors = RadioButtonDefaults.colors(selectedColor = MaterialTheme.colorScheme.primary)
-                            )
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text(label, color = MaterialTheme.colorScheme.onBackground, modifier = Modifier.align(Alignment.CenterVertically))
-                        }
-                    }
-                }
-            },
-            confirmButton = {},
-            containerColor = MaterialTheme.colorScheme.surface,
-            titleContentColor = MaterialTheme.colorScheme.onBackground
-        )
-    }
-
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -335,22 +291,6 @@ fun SettingsScreen(viewModel: SurvivalViewModel) {
                 title = "Список на главной",
                 subtitle = homeListLabel,
                 onClick = { showHomeListDialog = true }
-            )
-
-            // Cover Image
-            SettingsItem(
-                icon = Icons.Default.Image,
-                title = "Обложка",
-                subtitle = coverLabel,
-                onClick = { showCoverDialog = true }
-            )
-
-            // Cover Image
-            SettingsItem(
-                icon = Icons.Default.Image,
-                title = "Обложка",
-                subtitle = coverLabel,
-                onClick = { showCoverDialog = true }
             )
 
             Spacer(modifier = Modifier.height(24.dp))

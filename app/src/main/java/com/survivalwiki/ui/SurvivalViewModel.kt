@@ -21,7 +21,6 @@ class SurvivalViewModel(
     val fontSizeFlow = settingsManager.fontSizeFlow
     val accentColorFlow = settingsManager.accentColorFlow
     val homeListTypeFlow = settingsManager.homeListTypeFlow
-    val coverImageFlow = settingsManager.coverImageFlow
 
     private val _categories = MutableStateFlow<List<Category>>(emptyList())
     val categories: StateFlow<List<Category>> = _categories.asStateFlow()
@@ -154,12 +153,6 @@ class SurvivalViewModel(
     fun setHomeListType(type: String) {
         viewModelScope.launch {
             settingsManager.setHomeListType(type)
-        }
-    }
-
-    fun setCoverImage(cover: String) {
-        viewModelScope.launch {
-            settingsManager.setCoverImage(cover)
         }
     }
 
