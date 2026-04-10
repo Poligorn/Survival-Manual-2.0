@@ -176,7 +176,9 @@ fun ArticleDetailScreen(
                 // Content Parser (Markdown-like custom logic for images and text)
                 item {
                     SelectionContainer {
-                        ArticleContent(content = currentArticle.content, baseTextSize = baseTextSize)
+                        Column {
+                            ArticleContent(content = currentArticle.content, baseTextSize = baseTextSize)
+                        }
                     }
                 }
                 
