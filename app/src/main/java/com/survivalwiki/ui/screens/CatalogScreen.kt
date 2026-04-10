@@ -268,13 +268,6 @@ fun CategoryCard(category: Category, onClick: () -> Unit) {
             fontSize = 14.sp,
             textAlign = TextAlign.Center
         )
-        Spacer(modifier = Modifier.height(4.dp))
-        Text(
-            text = category.description ?: "",
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            fontSize = 12.sp,
-            textAlign = TextAlign.Center
-        )
     }
 }
 

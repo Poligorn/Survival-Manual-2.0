@@ -42,7 +42,6 @@ structure = [
     ("Электроэнергия", "Генерация и использование электроэнергии в условиях выживания", "Power.md", "ic_bolt"),
     ("Узлы", "Основные узлы и их применение", "RopesAndKnots.md", "ic_gesture"),
     ("Черный список", "Вещи, которых следует избегать в условиях выживания", "ManMadeHazards.md", "ic_cancel"),
-    ("Ссылки", "Полезные ресурсы и ссылки", "FAQ.md", "ic_link"),
 ]
 
 def clean_markdown(content):
@@ -92,7 +91,7 @@ for idx, (cat_title, art_title, filename, icon) in enumerate(structure):
     categories.append({
         "id": cat_id,
         "title": cat_title,
-        "description": f"Раздел: {cat_title}",
+        "description": "",
         "iconResName": icon
     })
     

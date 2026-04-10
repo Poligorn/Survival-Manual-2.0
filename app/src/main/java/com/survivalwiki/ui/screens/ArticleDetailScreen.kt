@@ -31,6 +31,7 @@ import com.survivalwiki.ui.theme.PrimaryOrange
 import com.survivalwiki.ui.theme.SurfaceDark
 
 import androidx.compose.ui.unit.TextUnit
+import androidx.compose.foundation.text.selection.SelectionContainer
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -174,7 +175,9 @@ fun ArticleDetailScreen(
 
                 // Content Parser (Markdown-like custom logic for images and text)
                 item {
-                    ArticleContent(content = currentArticle.content, baseTextSize = baseTextSize)
+                    SelectionContainer {
+                        ArticleContent(content = currentArticle.content, baseTextSize = baseTextSize)
+                    }
                 }
                 
                 item {

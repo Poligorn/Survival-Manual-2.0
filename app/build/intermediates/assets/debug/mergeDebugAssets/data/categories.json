@@ -2,199 +2,193 @@
   {
     "id": 1,
     "title": "Введение",
-    "description": "Раздел: Введение",
+    "description": "",
     "iconResName": "ic_local_fire_department"
   },
   {
     "id": 2,
     "title": "Психология",
-    "description": "Раздел: Психология",
+    "description": "",
     "iconResName": "ic_psychology"
   },
   {
     "id": 3,
     "title": "Планирование",
-    "description": "Раздел: Планирование",
+    "description": "",
     "iconResName": "ic_map"
   },
   {
     "id": 4,
     "title": "Наборы",
-    "description": "Раздел: Наборы",
+    "description": "",
     "iconResName": "ic_build"
   },
   {
     "id": 5,
     "title": "Приложения",
-    "description": "Раздел: Приложения",
+    "description": "",
     "iconResName": "ic_phone_android"
   },
   {
     "id": 6,
     "title": "Базовая медицина",
-    "description": "Раздел: Базовая медицина",
+    "description": "",
     "iconResName": "ic_medical_services"
   },
   {
     "id": 7,
     "title": "Укрытия",
-    "description": "Раздел: Укрытия",
+    "description": "",
     "iconResName": "ic_house"
   },
   {
     "id": 8,
     "title": "Добыча воды",
-    "description": "Раздел: Добыча воды",
+    "description": "",
     "iconResName": "ic_water_drop"
   },
   {
     "id": 9,
     "title": "Разведение огня",
-    "description": "Раздел: Разведение огня",
+    "description": "",
     "iconResName": "ic_local_fire_department"
   },
   {
     "id": 10,
     "title": "Добыча пищи",
-    "description": "Раздел: Добыча пищи",
+    "description": "",
     "iconResName": "ic_restaurant"
   },
   {
     "id": 11,
     "title": "Использование растений",
-    "description": "Раздел: Использование растений",
+    "description": "",
     "iconResName": "ic_forest"
   },
   {
     "id": 12,
     "title": "Опасные животные",
-    "description": "Раздел: Опасные животные",
+    "description": "",
     "iconResName": "ic_pets"
   },
   {
     "id": 13,
     "title": "Инструменты и оборудование",
-    "description": "Раздел: Инструменты и оборудование",
+    "description": "",
     "iconResName": "ic_build"
   },
   {
     "id": 14,
     "title": "Ремонт автомобиля",
-    "description": "Раздел: Ремонт автомобиля",
+    "description": "",
     "iconResName": "ic_directions_car"
   },
   {
     "id": 15,
     "title": "Базовые механические навыки",
-    "description": "Раздел: Базовые механические навыки",
+    "description": "",
     "iconResName": "ic_build"
   },
   {
     "id": 16,
     "title": "Вождение без света",
-    "description": "Раздел: Вождение без света",
+    "description": "",
     "iconResName": "ic_directions_car"
   },
   {
     "id": 17,
     "title": "Оружие",
-    "description": "Раздел: Оружие",
+    "description": "",
     "iconResName": "ic_warning"
   },
   {
     "id": 18,
     "title": "Пустыня",
-    "description": "Раздел: Пустыня",
+    "description": "",
     "iconResName": "ic_wb_sunny"
   },
   {
     "id": 19,
     "title": "Тропики",
-    "description": "Раздел: Тропики",
+    "description": "",
     "iconResName": "ic_park"
   },
   {
     "id": 20,
     "title": "Холодная погода",
-    "description": "Раздел: Холодная погода",
+    "description": "",
     "iconResName": "ic_ac_unit"
   },
   {
     "id": 21,
     "title": "Море",
-    "description": "Раздел: Море",
+    "description": "",
     "iconResName": "ic_sailing"
   },
   {
     "id": 22,
     "title": "Переправа через воду",
-    "description": "Раздел: Переправа через воду",
+    "description": "",
     "iconResName": "ic_sailing"
   },
   {
     "id": 23,
     "title": "Ориентирование",
-    "description": "Раздел: Ориентирование",
+    "description": "",
     "iconResName": "ic_explore"
   },
   {
     "id": 24,
     "title": "Сигнальные техники",
-    "description": "Раздел: Сигнальные техники",
+    "description": "",
     "iconResName": "ic_campaign"
   },
   {
     "id": 25,
     "title": "Выживание в враждебных районах",
-    "description": "Раздел: Выживание в враждебных районах",
+    "description": "",
     "iconResName": "ic_warning"
   },
   {
     "id": 26,
     "title": "Камуфляж",
-    "description": "Раздел: Камуфляж",
+    "description": "",
     "iconResName": "ic_visibility_off"
   },
   {
     "id": 27,
     "title": "Контакт с местными жителями",
-    "description": "Раздел: Контакт с местными жителями",
+    "description": "",
     "iconResName": "ic_people"
   },
   {
     "id": 28,
     "title": "Опасные членистоногие",
-    "description": "Раздел: Опасные членистоногие",
+    "description": "",
     "iconResName": "ic_bug_report"
   },
   {
     "id": 29,
     "title": "Рыбы и моллюски",
-    "description": "Раздел: Рыбы и моллюски",
+    "description": "",
     "iconResName": "ic_set_meal"
   },
   {
     "id": 30,
     "title": "Электроэнергия",
-    "description": "Раздел: Электроэнергия",
+    "description": "",
     "iconResName": "ic_bolt"
   },
   {
     "id": 31,
     "title": "Узлы",
-    "description": "Раздел: Узлы",
+    "description": "",
     "iconResName": "ic_gesture"
   },
   {
     "id": 32,
     "title": "Черный список",
-    "description": "Раздел: Черный список",
+    "description": "",
     "iconResName": "ic_cancel"
-  },
-  {
-    "id": 33,
-    "title": "Ссылки",
-    "description": "Раздел: Ссылки",
-    "iconResName": "ic_link"
   }
 ]
