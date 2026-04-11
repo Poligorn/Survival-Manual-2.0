@@ -32,6 +32,7 @@ import com.survivalwiki.ui.theme.SurfaceDark
 
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.foundation.text.selection.SelectionContainer
+import androidx.compose.ui.text.withStyle
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -68,7 +69,7 @@ fun ArticleDetailScreen(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Back",
-                            tint = Color.White
+                            tint = MaterialTheme.colorScheme.onBackground
                         )
                     }
                 },
@@ -85,13 +86,13 @@ fun ArticleDetailScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(0xFF000000),
-                    navigationIconContentColor = Color.White,
+                    containerColor = MaterialTheme.colorScheme.background,
+                    navigationIconContentColor = MaterialTheme.colorScheme.onBackground,
                     actionIconContentColor = MaterialTheme.colorScheme.primary
                 )
             )
         },
-        containerColor = Color(0xFF000000)
+        containerColor = MaterialTheme.colorScheme.background
     ) { paddingValues ->
         if (article == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -110,7 +111,7 @@ fun ArticleDetailScreen(
                 item {
                     Text(
                         text = currentArticle.title,
-                        color = Color.White,
+                        color = MaterialTheme.colorScheme.onBackground,
                         fontSize = titleSize,
                         fontWeight = FontWeight.Bold,
                         lineHeight = titleSize * 1.2
@@ -127,7 +128,7 @@ fun ArticleDetailScreen(
                         Row(
                             modifier = Modifier
                                 .clip(RoundedCornerShape(16.dp))
-                                .background(SurfaceDark)
+                                .background(MaterialTheme.colorScheme.surfaceVariant)
                                 .padding(horizontal = 12.dp, vertical = 6.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
@@ -140,7 +141,7 @@ fun ArticleDetailScreen(
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(
                                 text = currentArticle.tags.split(",").firstOrNull()?.removePrefix("#")?.replaceFirstChar { it.uppercase() } ?: "Общее",
-                                color = Color.White,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 fontSize = 14.sp
                             )
                         }
@@ -150,12 +151,12 @@ fun ArticleDetailScreen(
                             Box(
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(16.dp))
-                                    .border(1.dp, Color.DarkGray, RoundedCornerShape(16.dp))
+                                    .border(1.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(16.dp))
                                     .padding(horizontal = 12.dp, vertical = 6.dp)
                             ) {
                                 Text(
                                     text = level,
-                                    color = Color.LightGray,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     fontSize = 14.sp
                                 )
                             }
@@ -167,7 +168,7 @@ fun ArticleDetailScreen(
                 item {
                     Text(
                         text = "Обновлено: ${currentArticle.lastUpdated ?: "Неизвестно"} • Время чтения: ${currentArticle.readTimeMin} мин",
-                        color = Color.Gray,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         fontSize = 12.sp
                     )
                     Spacer(modifier = Modifier.height(8.dp))
@@ -239,17 +240,57 @@ fun ParsedText(text: String, baseTextSize: TextUnit = 16.sp) {
                     Spacer(modifier = Modifier.height(if (level <= 2) 12.dp else 8.dp))
                     Text(
                         text = content,
-                        color = Color.White,
+                        color = MaterialTheme.colorScheme.onBackground,
                         fontSize = baseTextSize * sizeMultiplier,
                         fontWeight = FontWeight.Bold
                     )
                 }
                 line.isNotBlank() -> {
-                    Text(
-                        text = line,
-                        color = Color.LightGray,
-                        fontSize = baseTextSize,
-                        lineHeight = baseTextSize * 1.5
+                    val uriHandler = androidx.compose.ui.platform.LocalUriHandler.current
+                    val linkColor = MaterialTheme.colorScheme.primary
+                    val textColor = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.85f)
+                    
+                    val linkRegex = Regex("\\[(.*?)\\]\\((.*?)\\)")
+                    val annotatedString = androidx.compose.ui.text.buildAnnotatedString {
+                        var lastIndex = 0
+                        for (match in linkRegex.findAll(line)) {
+                            val textBefore = line.substring(lastIndex, match.range.first)
+                            append(textBefore)
+                            
+                            val linkText = match.groupValues[1]
+                            val linkUrl = match.groupValues[2]
+                            
+                            pushStringAnnotation(tag = "URL", annotation = linkUrl)
+                            withStyle(style = androidx.compose.ui.text.SpanStyle(
+                                color = linkColor,
+                                textDecoration = androidx.compose.ui.text.style.TextDecoration.Underline
+                            )) {
+                                append(linkText)
+                            }
+                            pop()
+                            
+                            lastIndex = match.range.last + 1
+                        }
+                        append(line.substring(lastIndex))
+                    }
+                    
+                    androidx.compose.foundation.text.ClickableText(
+                        text = annotatedString,
+                        style = androidx.compose.ui.text.TextStyle(
+                            color = textColor,
+                            fontSize = baseTextSize,
+                            lineHeight = baseTextSize * 1.5
+                        ),
+                        onClick = { offset ->
+                            annotatedString.getStringAnnotations(tag = "URL", start = offset, end = offset)
+                                .firstOrNull()?.let { annotation ->
+                                    try {
+                                        uriHandler.openUri(annotation.item)
+                                    } catch (e: Exception) {
+                                        // Ignore
+                                    }
+                                }
+                        }
                     )
                 }
             }
@@ -265,7 +306,7 @@ fun ArticleImage(filename: String, caption: String) {
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(16.dp))
-            .background(SurfaceDark),
+            .background(MaterialTheme.colorScheme.surfaceVariant),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // Coil can load files from assets using the file:///android_asset/ path
@@ -284,7 +325,7 @@ fun ArticleImage(filename: String, caption: String) {
         if (caption.isNotBlank()) {
             Text(
                 text = caption,
-                color = Color.Gray,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontSize = 12.sp,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(12.dp)

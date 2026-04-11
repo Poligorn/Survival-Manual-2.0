@@ -65,8 +65,8 @@ fun SettingsScreen(viewModel: SurvivalViewModel) {
     if (showClearDialog) {
         AlertDialog(
             onDismissRequest = { showClearDialog = false },
-            title = { Text("Очистить историю", color = Color.White) },
-            text = { Text("Вы действительно хотите удалить всю историю просмотренных статей?", color = Color.LightGray) },
+            title = { Text("Очистить историю", color = MaterialTheme.colorScheme.onSurface) },
+            text = { Text("Вы действительно хотите удалить всю историю просмотренных статей?", color = MaterialTheme.colorScheme.onSurfaceVariant) },
             confirmButton = {
                 TextButton(onClick = {
                     viewModel.clearHistory()
@@ -77,19 +77,19 @@ fun SettingsScreen(viewModel: SurvivalViewModel) {
             },
             dismissButton = {
                 TextButton(onClick = { showClearDialog = false }) {
-                    Text("Отмена", color = Color.Gray)
+                    Text("Отмена", color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             },
-            containerColor = SurfaceDark,
-            textContentColor = Color.White,
-            titleContentColor = Color.White
+            containerColor = MaterialTheme.colorScheme.surface,
+            textContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+            titleContentColor = MaterialTheme.colorScheme.onSurface
         )
     }
 
     if (showThemeDialog) {
         AlertDialog(
             onDismissRequest = { showThemeDialog = false },
-            title = { Text("Тема оформления", color = Color.White) },
+            title = { Text("Тема оформления", color = MaterialTheme.colorScheme.onSurface) },
             text = {
                 Column {
                     listOf("dark" to "Темная тема", "light" to "Светлая тема", "system" to "Системная тема").forEach { (value, label) ->
@@ -111,14 +111,14 @@ fun SettingsScreen(viewModel: SurvivalViewModel) {
                                 colors = RadioButtonDefaults.colors(selectedColor = MaterialTheme.colorScheme.primary)
                             )
                             Spacer(modifier = Modifier.width(8.dp))
-                            Text(label, color = Color.White, modifier = Modifier.align(Alignment.CenterVertically))
+                            Text(label, color = MaterialTheme.colorScheme.onSurface, modifier = Modifier.align(Alignment.CenterVertically))
                         }
                     }
                 }
             },
             confirmButton = {},
-            containerColor = SurfaceDark,
-            titleContentColor = Color.White
+            containerColor = MaterialTheme.colorScheme.surface,
+            titleContentColor = MaterialTheme.colorScheme.onSurface
         )
     }
 
@@ -233,13 +233,13 @@ fun SettingsScreen(viewModel: SurvivalViewModel) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF0D0D0D))
+            .background(MaterialTheme.colorScheme.background)
     ) {
         TopAppBar(
             title = {
                 Text(
                     text = "Настройки",
-                    color = Color.White,
+                    color = MaterialTheme.colorScheme.onBackground,
                     fontSize = 24.sp,
                     fontWeight = FontWeight.Bold
                 )

@@ -70,6 +70,7 @@ dimen notification_top_pad
 dimen notification_top_pad_large_text
 drawable abc_vector_test
 drawable home_bg
+drawable home_bg_dark
 drawable home_bg_desert
 drawable home_bg_forest
 drawable home_bg_mountain

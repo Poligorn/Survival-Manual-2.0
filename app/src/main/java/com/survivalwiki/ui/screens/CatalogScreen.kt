@@ -301,11 +301,34 @@ fun ArticleGridCard(article: Article, onClick: () -> Unit) {
             maxLines = 2
         )
         Spacer(modifier = Modifier.height(4.dp))
-        Text(
-            text = article.level ?: "Статья",
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            fontSize = 11.sp,
-            textAlign = TextAlign.Center
-        )
+        DifficultyCircles(level = article.level)
+    }
+}
+
+@Composable
+fun DifficultyCircles(level: String?) {
+    val levelInt = when {
+        level?.contains("Базовый", ignoreCase = true) == true -> 1
+        level?.contains("Средний", ignoreCase = true) == true -> 2
+        level?.contains("Продвинутый", ignoreCase = true) == true -> 3
+        else -> 0
+    }
+    if (levelInt == 0) return
+
+    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+        for (i in 1..3) {
+            val color = when {
+                i > levelInt -> MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)
+                levelInt == 1 -> Color(0xFF4CAF50) // Green
+                levelInt == 2 -> Color(0xFFFFC107) // Yellow
+                else -> Color(0xFFF44336) // Red
+            }
+            Box(
+                modifier = Modifier
+                    .size(8.dp)
+                    .clip(androidx.compose.foundation.shape.CircleShape)
+                    .background(color)
+            )
+        }
     }
 }

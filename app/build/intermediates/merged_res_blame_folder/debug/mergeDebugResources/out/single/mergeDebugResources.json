@@ -1,34 +1,38 @@
 [
     {
-        "merged": "com.survivalwiki.app-debug-4:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.survivalwiki.app-main-6:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-debug-4:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-main-6:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.survivalwiki.app-debug-4:/drawable_home_bg_forest.png.flat",
-        "source": "com.survivalwiki.app-main-6:/drawable/home_bg_forest.png"
+        "merged": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-debug-4:/drawable_home_bg_forest.png.flat",
+        "source": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-main-6:/drawable/home_bg_forest.png"
     },
     {
-        "merged": "com.survivalwiki.app-debug-4:/drawable_home_bg.png.flat",
-        "source": "com.survivalwiki.app-main-6:/drawable/home_bg.png"
+        "merged": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-debug-4:/drawable_home_bg_mountain.png.flat",
+        "source": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-main-6:/drawable/home_bg_mountain.png"
     },
     {
-        "merged": "com.survivalwiki.app-debug-4:/drawable_home_bg_desert.png.flat",
-        "source": "com.survivalwiki.app-main-6:/drawable/home_bg_desert.png"
+        "merged": "com.survivalwiki.app-debug-4:/drawable_home_bg_dark.png.flat",
+        "source": "com.survivalwiki.app-main-6:/drawable/home_bg_dark.png"
     },
     {
-        "merged": "com.survivalwiki.app-debug-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.survivalwiki.app-main-6:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-debug-4:/drawable_home_bg.png.flat",
+        "source": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-main-6:/drawable/home_bg.png"
     },
     {
-        "merged": "com.survivalwiki.app-debug-4:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.survivalwiki.app-main-6:/drawable/ic_launcher_foreground.xml"
+        "merged": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-debug-4:/drawable_ic_launcher_background.xml.flat",
+        "source": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-main-6:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.survivalwiki.app-debug-4:/drawable_home_bg_mountain.png.flat",
-        "source": "com.survivalwiki.app-main-6:/drawable/home_bg_mountain.png"
+        "merged": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-debug-4:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-main-6:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.survivalwiki.app-debug-4:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.survivalwiki.app-main-6:/drawable/ic_launcher_background.xml"
+        "merged": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-debug-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-main-6:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-debug-4:/drawable_home_bg_desert.png.flat",
+        "source": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/daemon/9.0.0/com.survivalwiki.app-main-6:/drawable/home_bg_desert.png"
     }
 ]

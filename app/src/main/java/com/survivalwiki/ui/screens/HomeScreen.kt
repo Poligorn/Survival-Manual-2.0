@@ -37,11 +37,17 @@ import com.survivalwiki.ui.theme.SurfaceDark
 fun HomeScreen(viewModel: SurvivalViewModel, onArticleClick: (Int) -> Unit) {
     var searchQuery by remember { mutableStateOf("") }
     
-    val tags = listOf("#первая_помощь", "#узлы", "#разведение_огня", "#вода", "#укрытие")
+    val tags = listOf("Основы первой помощи", "Как развести костер", "Узлы и их применение", "Методы добычи воды", "Постройка укрытия")
     val recentArticles by viewModel.recentArticles.collectAsState()
     val bookmarkedArticles by viewModel.bookmarkedArticles.collectAsState()
     val searchResults by viewModel.searchResults.collectAsState()
     val homeListType by viewModel.homeListTypeFlow.collectAsState(initial = "recent")
+    val themeStr by viewModel.themeFlow.collectAsState(initial = "dark")
+    val isDarkTheme = when (themeStr) {
+        "light" -> false
+        "system" -> androidx.compose.foundation.isSystemInDarkTheme()
+        else -> true
+    }
 
     val displayList = if (homeListType == "bookmarks") bookmarkedArticles else recentArticles
     val listTitle = if (homeListType == "bookmarks") "Избранное" else "Недавно читали"
@@ -53,9 +59,9 @@ fun HomeScreen(viewModel: SurvivalViewModel, onArticleClick: (Int) -> Unit) {
             .background(MaterialTheme.colorScheme.background)
     ) {
         // Pseudo Background Image (Gradient placeholder for forest)
-        Box(modifier = Modifier.fillMaxWidth().height(300.dp)) {
+        Box(modifier = Modifier.fillMaxWidth().height(400.dp)) {
             Image(
-                painter = painterResource(id = R.drawable.home_bg),
+                painter = painterResource(id = if (isDarkTheme) R.drawable.home_bg_dark else R.drawable.home_bg),
                 contentDescription = "Background",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
@@ -312,11 +318,15 @@ fun RecentArticleCard(article: Article, subtitle: String, onClick: () -> Unit) {
                 fontWeight = FontWeight.SemiBold
             )
             Spacer(modifier = Modifier.height(4.dp))
-            Text(
-                text = subtitle,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                fontSize = 12.sp
-            )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = subtitle,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    fontSize = 12.sp
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                DifficultyCircles(level = article.level)
+            }
         }
     }
 }

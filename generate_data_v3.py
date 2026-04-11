@@ -64,7 +64,7 @@ def clean_markdown(content):
         line = re.sub(r'\*(.*?)\*', r'\1', line)
         line = re.sub(r'_(.*?)_', r'\1', line)
         
-        line = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', line)
+        # line = re.sub(r'\[(.*?)\]\(.*?\)', r'\1', line)
         
         if line.startswith('> '):
             line = line[2:]

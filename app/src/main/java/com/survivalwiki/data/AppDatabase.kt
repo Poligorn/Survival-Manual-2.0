@@ -11,7 +11,7 @@ import com.survivalwiki.data.entity.Category
 
 @Database(
     entities = [Category::class, Article::class, ArticleFts::class],
-    version = 8,
+    version = 16,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {

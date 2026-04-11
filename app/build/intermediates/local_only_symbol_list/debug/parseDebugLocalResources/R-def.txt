@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 drawable home_bg
+drawable home_bg_dark
 drawable home_bg_desert
 drawable home_bg_forest
 drawable home_bg_mountain
