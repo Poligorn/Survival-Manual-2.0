@@ -107,42 +107,26 @@ fun CatalogScreen(viewModel: SurvivalViewModel, onArticleClick: (Int) -> Unit) {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        if (!isFilterActive) {
+        if (displayArticles.isEmpty()) {
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Text(
+                    "Ничего не найдено", 
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    fontSize = 16.sp
+                )
+            }
+        } else {
             LazyVerticalGrid(
                 columns = GridCells.Fixed(2),
                 horizontalArrangement = Arrangement.spacedBy(16.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
                 modifier = Modifier.fillMaxSize()
             ) {
-                items(categories) { category ->
-                    CategoryCard(category, onClick = { 
-                        // Right now, onClick opens article 1, but we'll stick to what we have or you'd open article list
-                        onArticleClick(category.id) 
-                    })
-                }
-            }
-        } else {
-            if (displayArticles.isEmpty()) {
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text(
-                        "Ничего не найдено", 
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        fontSize = 16.sp
+                items(displayArticles) { article ->
+                    ArticleGridCard(
+                        article = article, 
+                        onClick = { onArticleClick(article.id) }
                     )
-                }
-            } else {
-                LazyVerticalGrid(
-                    columns = GridCells.Fixed(2),
-                    horizontalArrangement = Arrangement.spacedBy(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp),
-                    modifier = Modifier.fillMaxSize()
-                ) {
-                    items(displayArticles) { article ->
-                        ArticleGridCard(
-                            article = article, 
-                            onClick = { onArticleClick(article.id) }
-                        )
-                    }
                 }
             }
         }

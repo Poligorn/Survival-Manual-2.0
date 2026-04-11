@@ -7,6 +7,7 @@ drawable home_bg_forest
 drawable home_bg_mountain
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_launcher_monochrome
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
