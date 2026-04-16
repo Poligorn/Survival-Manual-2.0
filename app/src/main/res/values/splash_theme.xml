@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SurvivalWiki.Starting.Orange" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#1A1A1A</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/avd_splash_logo_orange</item>
+        <item name="windowSplashScreenAnimationDuration">900</item>
+        <item name="postSplashScreenTheme">@style/Theme.SurvivalWiki</item>
+    </style>
+    <style name="Theme.SurvivalWiki.Starting.Olive" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#1A1A1A</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/avd_splash_logo_olive</item>
+        <item name="windowSplashScreenAnimationDuration">900</item>
+        <item name="postSplashScreenTheme">@style/Theme.SurvivalWiki</item>
+    </style>
+    <style name="Theme.SurvivalWiki.Starting.Blue" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#1A1A1A</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/avd_splash_logo_blue</item>
+        <item name="windowSplashScreenAnimationDuration">900</item>
+        <item name="postSplashScreenTheme">@style/Theme.SurvivalWiki</item>
+    </style>
+</resources>

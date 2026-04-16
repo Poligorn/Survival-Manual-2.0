@@ -1,8 +1,10 @@
 package com.survivalwiki.ui
 
+import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.survivalwiki.LauncherIconController
 import com.survivalwiki.data.ArticleRepository
 import com.survivalwiki.data.entity.Article
 import com.survivalwiki.data.entity.Category
@@ -14,7 +16,8 @@ import kotlinx.coroutines.launch
 
 class SurvivalViewModel(
     private val repository: ArticleRepository,
-    private val settingsManager: SettingsManager
+    private val settingsManager: SettingsManager,
+    private val application: Application
 ) : ViewModel() {
 
     val themeFlow = settingsManager.themeFlow
@@ -147,6 +150,7 @@ class SurvivalViewModel(
     fun setAccentColor(color: String) {
         viewModelScope.launch {
             settingsManager.setAccentColor(color)
+            LauncherIconController.syncFromAccent(application, color)
         }
     }
 
@@ -167,12 +171,13 @@ class SurvivalViewModel(
 
 class SurvivalViewModelFactory(
     private val repository: ArticleRepository,
-    private val settingsManager: SettingsManager
+    private val settingsManager: SettingsManager,
+    private val application: Application
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(SurvivalViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
-            return SurvivalViewModel(repository, settingsManager) as T
+            return SurvivalViewModel(repository, settingsManager, application) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

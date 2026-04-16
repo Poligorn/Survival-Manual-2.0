@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.survivalwiki.app-mergeDebugResources-2:/values-v16/values-v16.xml",
+            "outputFile": "com.survivalwiki.app-mergeDebugResources-58:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/private/var/folders/78/5mcrjnn10f17p27bb8wgpsgr0000gn/T/cursor-sandbox-cache/6b97c6a83e595823abcdf8169baa5bff/gradle/caches/9.0.0/transforms/cf0476165bc6e03bd1ab59f1c348af8e/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/poligorn/.gradle/caches/9.0.0/transforms/4d4deb1c38ec506da426611facc3444b/transformed/core-1.12.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

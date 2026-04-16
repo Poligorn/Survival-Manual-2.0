@@ -20,22 +20,58 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_orange"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_round_orange"
         android:supportsRtl="true"
-        android:testOnly="true"
-        android:theme="@style/Theme.SurvivalWiki" >
+        android:theme="@style/Theme.SurvivalWiki.Starting.Orange" >
         <activity
             android:name="com.survivalwiki.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.SurvivalWiki" >
+            android:theme="@style/Theme.SurvivalWiki.Starting.Orange" />
+
+        <activity-alias
+            android:name="com.survivalwiki.LauncherBlue"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_blue"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round_blue"
+            android:targetActivity="com.survivalwiki.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity-alias>
+        <activity-alias
+            android:name="com.survivalwiki.LauncherOlive"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_olive"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round_olive"
+            android:targetActivity="com.survivalwiki.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name="com.survivalwiki.LauncherOrange"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher_orange"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round_orange"
+            android:targetActivity="com.survivalwiki.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
 
         <provider
             android:name="androidx.startup.InitializationProvider"

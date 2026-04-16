@@ -88,19 +88,13 @@ fun HomeScreen(viewModel: SurvivalViewModel, onArticleClick: (Int) -> Unit) {
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(start = 24.dp, top = 48.dp, end = 24.dp, bottom = 24.dp)
             ) {
-                val logoColor = MaterialTheme.colorScheme.primary
-                androidx.compose.foundation.Canvas(modifier = Modifier.size(32.dp)) {
-                    val path = androidx.compose.ui.graphics.Path().apply {
-                        val triangleHeight = size.width * 0.866025f
-                        val yOffset = (size.height - triangleHeight) / 2f
-                        moveTo(size.width / 2f, yOffset)
-                        lineTo(size.width, yOffset + triangleHeight)
-                        lineTo(0f, yOffset + triangleHeight)
-                        close()
-                    }
-                    drawPath(path = path, color = logoColor)
-                }
-                Spacer(modifier = Modifier.width(8.dp))
+                Icon(
+                    painter = painterResource(id = R.drawable.ic_survival_logo),
+                    contentDescription = "Logo",
+                    tint = Color.White,
+                    modifier = Modifier.size(86.dp)
+                )
+                Spacer(modifier = Modifier.width(0.dp))
                 Column {
                     Text(
                         text = "Мануал",

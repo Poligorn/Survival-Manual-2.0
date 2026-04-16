@@ -1,5 +1,9 @@
 R_DEF: Internal format may change without notice
 local
+animator splash_logo_enter
+drawable avd_splash_logo_blue
+drawable avd_splash_logo_olive
+drawable avd_splash_logo_orange
 drawable home_bg
 drawable home_bg_dark
 drawable home_bg_desert
@@ -8,7 +12,24 @@ drawable home_bg_mountain
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_launcher_monochrome
+drawable ic_logo_fg_blue
+drawable ic_logo_fg_olive
+drawable ic_logo_fg_orange
+drawable ic_splash_logo
+drawable ic_splash_logo_blue_static
+drawable ic_splash_logo_olive_static
+drawable ic_splash_logo_orange_static
+drawable ic_survival_logo
 mipmap ic_launcher
+mipmap ic_launcher_blue
+mipmap ic_launcher_olive
+mipmap ic_launcher_orange
 mipmap ic_launcher_round
+mipmap ic_launcher_round_blue
+mipmap ic_launcher_round_olive
+mipmap ic_launcher_round_orange
 string app_name
 style Theme.SurvivalWiki
+style Theme.SurvivalWiki.Starting.Blue
+style Theme.SurvivalWiki.Starting.Olive
+style Theme.SurvivalWiki.Starting.Orange
